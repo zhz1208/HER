@@ -312,7 +312,7 @@ var objects = {
         'states': {
             0: {
                 'image': 'objects/calendar/ca1.png',
-                'text':'It is a calendar. But  is only one day on each page. And the past days were torn down',
+                'text':'It is a calendar. But there is only one day on each page. The past days were torn down',
             },
         },
         'curr_state': 0,
@@ -535,6 +535,15 @@ $(function() {
 
         evt.stopPropagation();
     });
+    
+      $("#calendar").click(function(evt) {
+        curr_object = 'calendar';
+        $("#object_page").show();
+        update_object_display();
+
+        evt.stopPropagation();
+    });
+
 
     //shelf
     $("#shelf").click(function(evt) {
