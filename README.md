@@ -14,11 +14,11 @@ I have collected almost 100 things related to the site and arranged them in the 
 
 ## Version 1
 I created a 3d virtual room to represent my room. People outside can “get in” from the window and visit the place.
-![](https://github.com/zhz1208/HER/blob/master/Documentation/Collage_Fotor.jpg)
+<br>![](https://github.com/zhz1208/HER/blob/master/Documentation/Collage_Fotor.jpg)
 
 ## Version 2
 Based on the feedback, I added more personal items to make the room more “me”.
-![](https://github.com/zhz1208/HER/blob/master/Documentation/snap2018-10-25-18-10-55.png)
+<br>![](https://github.com/zhz1208/HER/blob/master/Documentation/snap2018-10-25-18-10-55.png)
 
 ## Version 3
 https://drive.google.com/open?id=1XLq0HpDiICHS0_Q_3WGKuYY-kuBDjt28
@@ -32,7 +32,8 @@ https://zhz1208.github.io/HER/
 My concept was that people outside could enter my room and interact with the objects in my room. Thus, my room changes to a public space from private space. This concept is to amplify the phenomenon that the floor-to-ceiling window widely used in apartments brings the issue of privacy exposure.
 
 I had spent time thinking about why people fear a loss of privacy until I read a viewpoint: 
-> Meanwhile, the danger to us as individuals shift from privacy to probability: algorithms will predict the likelihood… 
+> Meanwhile, the danger to us as individuals shift from privacy to probability: algorithms will predict the likelihood…
+
 –Viktor Mayer-Schönberger in Big Data: A Revolution That Will Transform How We Live, Work, and Think
 
 People may not care about exposing their privacy to the public but fear the public piece together the fragmented information and figure out who they are. That is the point of view my project will express.
