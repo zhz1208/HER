@@ -1,5 +1,5 @@
 # HER
-This is the assignment for Frontier Space - Project 2: Filter<br>
+This is the assignment for Frontier Space - Project 2: Filter<br><br>
 [HER](https://zhz1208.github.io/HER)
 
 ## The Concept
