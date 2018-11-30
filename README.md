@@ -1,6 +1,4 @@
-# HER
-This is the assignment for Frontier Space - Project 2: Filter<br>
-[HER](https://zhz1208.github.io/HER)
+# [HER](https://zhz1208.github.io/HER)
 
 ## The Concept
 The site I designed for is my room in 855 Brannan Apartment. The filter is the window in my room. So, the window is a boundary between private space and public space.
