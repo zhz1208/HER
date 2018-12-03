@@ -1,5 +1,4 @@
 
-
 @font-face {
     font-family: 'Andale Mono';
     src:url('Andale Mono');
@@ -315,4 +314,288 @@ body{
     }
 
 }
+
+/*info*/
+.toggle {
+    position: fixed;
+    right: 4vh;
+    top: 4vh;
+    transition: -webkit-transform 0.3s 0.2s ease;
+    transition: transform 0.3s 0.2s ease;
+    transition: transform 0.3s 0.2s ease, -webkit-transform 0.3s 0.2s ease;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    margin: 0;
+    outline: 0 none;
+    border: 0 none;
+    box-shadow: none;
+    text-align: center;
+    font-family: Andale Mono;
+    font-size: 0.4rem;
+    color: #000;
+    cursor: nw-resize;
+    opacity: 1;
+}
+@media screen and (max-width: 480px) {
+    .toggle {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+}
+.toggle:before, .toggle:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    bottom: -0.5rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    display: block;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+}
+.toggle:before {
+    transition: opacity 0.3s ease, -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease, -webkit-transform 0.3s ease-in-out;
+}
+.toggle:after {
+    transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+    background: #000;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.toggle.toggle--active {
+    transition: color 0.3s ease, -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+    color: #fff;
+    cursor: se-resize;
+}
+
+.toggle.toggle--active:before {
+    transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transform: scale(100);
+    transform: scale(100);
+    opacity: 0.95;
+}
+
+.toggle.toggle--active:after {
+    transition: -webkit-transform 0.3s cubic-bezier(0, 0.51, 0.27, 1.8);
+    transition: transform 0.3s cubic-bezier(0, 0.51, 0.27, 1.8);
+    transition: transform 0.3s cubic-bezier(0, 0.51, 0.27, 1.8), -webkit-transform 0.3s cubic-bezier(0, 0.51, 0.27, 1.8);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.toggle__icon {
+    display: block;
+    flex: 1 1 10px;
+    width: auto;
+    z-index: 1;
+    position: relative;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.toggle__icon .dot {
+    -webkit-animation-name: a-dot;
+    animation-name: a-dot;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.toggle.toggle--active .toggle__icon .dot {
+    -webkit-animation-name: a-dot-reverse;
+    animation-name: a-dot-reverse;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes a-dot {
+    0% {
+        stroke-dashoffset: -14;
+        stroke-dasharray: 30 50;
+        stroke: #fff;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 3 50;
+        stroke: #000;
+    }
+}
+
+@keyframes a-dot {
+    0% {
+        stroke-dashoffset: -14;
+        stroke-dasharray: 30 50;
+        stroke: #fff;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 3 50;
+        stroke: #000;
+    }
+}
+@-webkit-keyframes a-dot-reverse {
+    0% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 3 50;
+        stroke: #000;
+    }
+    100% {
+        stroke-dashoffset: -14;
+        stroke-dasharray: 30 50;
+        stroke: #fff;
+    }
+}
+@keyframes a-dot-reverse {
+    0% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 3 50;
+        stroke: #000;
+    }
+    100% {
+        stroke-dashoffset: -14;
+        stroke-dasharray: 30 50;
+        stroke: #fff;
+    }
+}
+.toggle__icon .stroke {
+    -webkit-animation-name: a-stroke;
+    animation-name: a-stroke;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.toggle.toggle--active .toggle__icon .stroke {
+    -webkit-animation-name: a-stroke-reverse;
+    animation-name: a-stroke-reverse;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes a-stroke {
+    0% {
+        stroke-dashoffset: -19.5;
+        stroke-dasharray: 30 50;
+        stroke: #fff;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 8 50;
+        stroke: #000;
+    }
+}
+
+@keyframes a-stroke {
+    0% {
+        stroke-dashoffset: -19.5;
+        stroke-dasharray: 30 50;
+        stroke: #fff;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 8 50;
+        stroke: #000;
+    }
+}
+@-webkit-keyframes a-stroke-reverse {
+    0% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 8 50;
+        stroke: #000;
+    }
+    100% {
+        stroke-dashoffset: -19.5;
+        stroke-dasharray: 30 50;
+        stroke: #fff;
+    }
+}
+@keyframes a-stroke-reverse {
+    0% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 8 50;
+        stroke: #000;
+    }
+    100% {
+        stroke-dashoffset: -19.5;
+        stroke-dasharray: 30 50;
+        stroke: #fff;
+    }
+}
+
+.info-message {
+    display: none;
+    position:fixed;
+    top: 25%; right: 0; bottom: auto; left: 0;
+    margin: auto;
+    font-family: Andale Mono;
+    color: #000;
+    font-size: .9rem;
+    line-height: 1.5;
+    /*    text-align: center;*/
+    /*    border: 1px solid red;*/
+    width: 50%;
+    height: 20%;
+
+    /*
+    align-content: center;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
+    */
+    z-index: 999;
+}
+
 

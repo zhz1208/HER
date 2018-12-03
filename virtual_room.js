@@ -535,8 +535,8 @@ $(function() {
 
         evt.stopPropagation();
     });
-    
-      $("#calendar").click(function(evt) {
+
+    $("#calendar").click(function(evt) {
         curr_object = 'calendar';
         $("#object_page").show();
         update_object_display();
@@ -584,7 +584,7 @@ $(function() {
         evt.stopPropagation();
     });
 
-    
+
     //---------------4-------------
 
     $("#object_page").click(function() {
@@ -604,5 +604,22 @@ $(function() {
         evt.stopPropagation();
     });
 
+    //info
+    info_shown = false;
+    document.querySelector('.toggle').addEventListener('click', function(e) {
+        e.preventDefault();
+        this.classList.toggle('toggle--active');
+        if (info_shown) {
+            $(".info-message").fadeOut(50);
+            info_shown = false;
+        } else {
+            $(".info-message").fadeIn(500);
+            info_shown = true;
+        }
+    });
+
 });
+
+
+
 
